@@ -1,0 +1,18 @@
+{
+  "name": "deployhub_node",
+  "framework": "Express",
+  "category": "Backend - Node.js",
+  "runtime": "nodejs",
+  "port": 3000,
+  "buildCommand": "npm install --production",
+  "startCommand": "node src/server.js",
+  "healthCheck": {
+    "path": "/api/health",
+    "expectedStatus": 200,
+    "timeoutSeconds": 10
+  },
+  "env": {
+    "PORT": "3000",
+    "NODE_ENV": "production"
+  }
+}
